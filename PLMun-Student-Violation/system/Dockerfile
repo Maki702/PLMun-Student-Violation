@@ -4,6 +4,8 @@ FROM php:8.3-apache
 # Enable Apache rewrite module
 RUN a2enmod rewrite
 
+RUN echo "output_buffering = On" > /usr/local/etc/php/conf.d/output-buffering.ini
+
 # Copy project files
 COPY . /var/www/html/
 
