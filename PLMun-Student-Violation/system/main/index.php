@@ -125,7 +125,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         ↑
     </button>
 
-<script src="../js/top-toggle.js"></script
+<script src="../js/top-toggle.js"></script>
 
 </body>
 
