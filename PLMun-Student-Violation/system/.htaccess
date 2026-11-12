@@ -1,0 +1,3 @@
+RewriteEngine On
+
+RewriteRule ^$ main/ [L,R=302]
