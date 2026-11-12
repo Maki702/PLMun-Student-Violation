@@ -1,0 +1,344 @@
+
+/* ========================================
+   GENERAL SETTINGS
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    overflow-y: scroll;
+}
+
+body {
+    background-color: #1B1F22;
+    color: #F1F3F4;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* ========================================
+   MAIN CONTENT
+======================================== */
+
+.main-content {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 40px 25px;
+    flex: 1;
+}
+
+
+/* ========================================
+   HEADER
+======================================== */
+
+.header-wrapper {
+    position: relative;
+}
+
+.main-header {
+    background-color: #2C3135;
+    border-bottom: 1px solid #454B50;
+    padding: 10px 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.PLMun-Logo {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.header-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.header-text h2 {
+    font-size: 25px;
+    font-family: "Times New Roman", serif;
+}
+
+.header-text p {
+    color: #C9D0D4;
+    font-size: 13px;
+    margin-top: 2px;
+}
+
+
+/* ========================================
+   HAMBURGER MENU BUTTON
+======================================== */
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+}
+
+.menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: #F1F3F4;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+
+
+/* ========================================
+   NAVIGATION
+======================================== */
+
+.navbar {
+    background-color: #2C3135;
+
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+
+    height: 40px;
+    padding: 0 40px;
+    gap: 0;
+}
+
+.navbar a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 100%;
+    padding: 0 20px;
+
+    color: #F0F8FA;
+    text-decoration: none;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+
+    border-left: 1px solid #454B50;
+
+    position: relative;
+    transition: color 0.3s;
+}
+
+
+/* BOTTOM ANIMATION */
+
+.navbar a::after {
+    content: "";
+    position: absolute;
+
+    bottom: 0;
+    left: 50%;
+
+    width: 0;
+    height: 2px;
+
+    background-color: #59883A;
+
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+
+/* LAST BORDER */
+
+.navbar a:last-child {
+    border-right: 1px solid #454B50;
+}
+
+
+/* HOVER */
+
+.navbar a:hover:not(.active) {
+    color: #59883A;
+}
+
+.navbar a:hover:not(.active)::after {
+    width: 100%;
+}
+
+
+/* ACTIVE PAGE */
+
+.navbar a.active {
+    color: #59883A;
+}
+
+.navbar a.active::after {
+    width: 0;
+}
+
+
+/* ========================================
+   FOOTER
+======================================== */
+
+.main-footer {
+    background-color: #2C3135;
+    border-top: 1px solid #454B50;
+
+    padding: 25px;
+    text-align: center;
+
+    color: #C9D0D4;
+    font-size: 12px;
+    line-height: 1.8;
+
+    margin-top: auto;
+}
+
+
+/* ========================================
+   BACK TO TOP BUTTON
+======================================== */
+
+#backToTop {
+    display: none;
+    position: fixed;
+
+    bottom: 25px;
+    right: 25px;
+
+    width: 35px;
+    height: 35px;
+
+    background-color: #59883A;
+    color: #FFFFFF;
+
+    border: none;
+    border-radius: 100px;
+
+    font-size: 20px;
+    font-weight: bold;
+
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+    z-index: 1000;
+
+    transition: background-color 0.3s ease;
+}
+
+#backToTop:hover {
+    background-color: #466D2F;
+}
+
+
+/* ========================================
+   RESPONSIVE DESIGN - MOBILE
+======================================== */
+
+@media (max-width: 600px) {
+
+    /* HEADER */
+
+    .main-header {
+        padding: 12px 15px;
+    }
+
+    .header-content {
+        width: auto;
+        margin: 0;
+        gap: 8px;
+    }
+
+    .PLMun-Logo {
+        width: 45px;
+        height: 45px;
+    }
+
+    .header-text h2 {
+        font-size: 16px;
+        line-height: 1.2;
+    }
+
+    .header-text p {
+        font-size: 10px;
+        line-height: 1.2;
+    }
+
+
+    /* HAMBURGER BUTTON */
+
+    .menu-toggle {
+        display: flex;
+        margin-left: auto;
+    }
+
+
+    /* MOBILE NAVIGATION */
+
+    .navbar {
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+
+        position: absolute;
+        top: 100%;
+        right: 10px;
+
+        width: 230px;
+        height: auto;
+        padding: 10px;
+
+        background-color: #2C3135;
+
+        border: 1px solid #454B50;
+        border-radius: 8px;
+
+        z-index: 1000;
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    .navbar a {
+        height: 45px;
+        width: 100%;
+
+        padding: 0 12px;
+        font-size: 13px;
+
+        justify-content: flex-start;
+
+        border: none;
+    }
+
+    .navbar a:last-child {
+        border-right: none;
+    }
+
+}

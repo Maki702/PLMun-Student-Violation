@@ -1,0 +1,386 @@
+
+/* CSS FOR STUDENT VIOLATION RECORDS */
+
+
+/* MAIN PAGE */
+
+.records-page {
+    padding: 35px 40px;
+}
+
+.violation-section {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* PAGE HEADER */
+
+.records-header {
+    margin-bottom: 28px;
+}
+
+.records-header h2 {
+    color: #F1F3F4;
+    font-size: 26px;
+    font-weight: 600;
+    margin: 0 0 8px;
+}
+
+
+/* SEARCH AND FILTER */
+
+.records-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 18px;
+    margin: 0 0 22px;
+    background-color: #2C3135;
+    border: 1px solid #454B50;
+}
+
+
+/* SEARCH INPUT */
+
+.search-wrapper {
+    position: relative;
+    flex: 1;
+    min-width: 220px;
+}
+
+.search-wrapper input {
+    width: 100%;
+    height: 42px;
+    box-sizing: border-box;
+    padding: 0 14px 0 40px;
+    background-color: #1B1F22;
+    color: #F1F3F4;
+    border: 1px solid #454B50;
+    font-size: 13px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.search-wrapper input::placeholder {
+    color: #9AA3A9;
+}
+
+.search-wrapper input:focus {
+    border-color: #59883A;
+}
+
+.search-icon {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #AEB6BC;
+    font-size: 20px;
+    pointer-events: none;
+}
+
+
+/* FILTER DROPDOWNS */
+
+.filter-wrapper {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.filter-wrapper select {
+    height: 42px;
+    min-width: 135px;
+    padding: 0 30px 0 12px;
+    background-color: #1B1F22;
+    color: #F1F3F4;
+    border: 1px solid #454B50;
+    font-size: 13px;
+    cursor: pointer;
+    outline: none;
+}
+
+.filter-wrapper select:focus {
+    border-color: #59883A;
+}
+
+.filter-wrapper select option {
+    background-color: #2C3135;
+    color: #F1F3F4;
+}
+
+
+/* MOBILE FILTER BUTTON */
+
+.mobile-filter-toggle {
+    display: none;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 14px;
+    background-color: #1B1F22;
+    color: #F1F3F4;
+    border: 1px solid #454B50;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: border-color 0.2s;
+}
+
+.mobile-filter-toggle:hover {
+    border-color: #59883A;
+}
+
+#filterArrow {
+    color: #70B58B;
+    font-size: 11px;
+}
+
+
+/* VIOLATION RECORD LIST */
+
+.violation-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+
+/* INDIVIDUAL RECORD */
+
+.violation-record {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+
+    background-color: #2C3135;
+    border: 1px solid #454B50;
+    border-radius: 9px;
+    padding: 20px 22px;
+
+    transition: border-color 0.2s ease;
+}
+
+.violation-record:hover {
+    border-color: #59883A;
+}
+
+
+/* RECORD INFORMATION */
+
+.violation-record-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.violation-record-info h3 {
+    color: #76a854;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.5;
+    margin: 0 0 12px;
+}
+
+.violation-record-info p {
+    color: #C9D0D4;
+    font-size: 13px;
+    line-height: 1.6;
+    margin: 5px 0;
+}
+
+.violation-record-info strong {
+    color: #F1F3F4;
+    font-weight: 600;
+}
+
+
+/* RIGHT SIDE COMMUNITY SERVICE ACTION */
+.violation-record-action {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 10px;
+    flex-shrink: 0;
+    text-align: right;
+}
+
+
+/* COMMUNITY SERVICE LINK */
+
+.view-service-link {
+    display: inline-block;
+    color: #C9D0D4;
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.view-service-link:hover {
+    color: #4E6C3C;
+    text-decoration: none;
+}
+
+
+/* STATUS LABELS */
+
+.status {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.status.ongoing {
+    color: #E6C66A;
+    background-color: #2D3E50;
+}
+
+.status.completed {
+    color: #70B58B;
+    background-color: #2D4537;
+}
+
+
+/* NO RECORDS MESSAGE */
+
+.no-records {
+    text-align: center;
+    color: #C9D0D4;
+    background-color: #2C3135;
+    border: 1px solid #454B50;
+    border-radius: 9px;
+    padding: 35px 20px;
+    font-size: 14px;
+}
+
+
+/* RESPONSIVE DESIGN - TABLET */
+
+@media screen and (max-width: 768px) {
+
+    .records-page {
+        padding: 25px 18px;
+    }
+
+    .records-header h2 {
+        font-size: 23px;
+    }
+
+
+    /* SEARCH AND FILTER CONTAINER */
+
+    .records-toolbar {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 15px;
+        gap: 12px;
+    }
+
+
+    /* SEARCH BAR */
+
+    .search-wrapper {
+        width: 100%;
+        min-width: 0;
+    }
+
+
+    /* MOBILE FILTER BUTTON */
+
+    .mobile-filter-toggle {
+        display: flex;
+    }
+
+
+    /* HIDE FILTERS BY DEFAULT */
+
+    .filter-wrapper {
+        display: none;
+        grid-template-columns: 1fr;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .filter-wrapper.show-filters {
+        display: grid;
+    }
+
+
+    /* FILTER DROPDOWNS */
+
+    .filter-wrapper select {
+        width: 100%;
+        min-width: 0;
+    }
+
+
+    /* VIOLATION RECORDS */
+
+    .violation-record {
+        align-items: flex-start;
+        gap: 18px;
+    }
+
+    .violation-record-action {
+        align-items: flex-end;
+    }
+
+}
+
+
+/* =====================================
+   SMALL MOBILE SCREENS
+===================================== */
+
+@media screen and (max-width: 480px) {
+
+    .records-page {
+        padding: 20px 12px;
+    }
+
+    .records-header h2 {
+        font-size: 21px;
+    }
+
+    .violation-record {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 16px;
+        gap: 15px;
+    }
+
+    .violation-record-info h3 {
+        font-size: 15px;
+    }
+
+    .violation-record-info p {
+        font-size: 12px;
+    }
+
+    .violation-record-action {
+        align-items: flex-start;
+        text-align: left;
+        border-top: 1px solid #454B50;
+        padding-top: 12px;
+        gap: 9px;
+    }
+
+    .view-service-link {
+        font-size: 12px;
+    }
+
+    .status {
+        font-size: 11px;
+    }
+
+}

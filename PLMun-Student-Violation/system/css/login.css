@@ -1,0 +1,183 @@
+
+/* GENERAL SETTINGS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #1B1F22;
+    background-image:
+        linear-gradient(rgba(15, 19, 17, 0.90), rgba(15, 19, 17, 0.75)),
+        url("../images/login-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #F1F3F4;
+    font-family: Arial, sans-serif;
+}
+
+
+/* LOGIN PAGE */
+
+.login-page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+}
+
+
+/* LOGIN CARD */
+
+.login-card {
+    width: 100%;
+    max-width: 420px;
+    padding: 40px;
+    background-color: #2C3135;
+    border: 1px solid #454B50;
+}
+
+
+/* LOGIN HEADER */
+
+.login-header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.login-header img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 18px;
+}
+
+.login-header h1 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.login-header p {
+    color: #C9D0D4;
+    font-size: 13px;
+}
+
+
+/* LOGIN FORM */
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #999DA3;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 13px 14px;
+    background-color: #1B1F22;
+    border: 1px solid #454B50;
+    color: #F1F3F4;
+    font-size: 13px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+    border-color: #59883A;
+}
+
+.form-group input::placeholder {
+    color: #929CA2;
+}
+
+
+/* LOGIN ERROR MESSAGE */
+
+.login-error {
+    margin-bottom: 18px;
+    padding: 12px;
+    background-color: rgba(190, 65, 65, 0.15);
+    border: 1px solid #A94B4B;
+    border-radius: 5px;
+    color: #F0A0A0;
+    font-size: 12px;
+    text-align: center;
+}
+
+
+/* LOGIN BUTTON */
+
+.login-card button[type="submit"] {
+    width: 100%;
+    padding: 13px;
+    margin-top: 8px;
+    background-color: #314E54;
+    border: 1px solid #4D696D;
+    color: #62ADB0;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-card button[type="submit"]:hover {
+    background-color: #355A5C;
+}
+
+
+/* BACK TO TOP BUTTON */
+
+#backToTop {
+    display: none;
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    width: 42px;
+    height: 42px;
+    align-items: center;
+    justify-content: center;
+    background-color: #59883A;
+    border: none;
+    border-radius: 50%;
+    color: #FFFFFF;
+    font-size: 22px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#backToTop:hover {
+    background-color: #466D2E;
+}
+
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 480px) {
+
+    .login-card {
+        padding: 30px 22px;
+    }
+
+    .login-header h1 {
+        font-size: 19px;
+    }
+
+    #backToTop {
+        right: 15px;
+        bottom: 15px;
+    }
+
+}

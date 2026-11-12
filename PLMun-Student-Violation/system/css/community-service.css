@@ -1,0 +1,392 @@
+
+/* COMMUNITY SERVICE PAGE */
+
+.community-service-page {
+    width: 100%;
+}
+
+/* SECTION HEADINGS */
+
+.service-summary h2,
+.service-progress h2,
+.assigned-service h2,
+.service-history h2 {
+    color: #F1F3F4;
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 18px;
+}
+
+.service-progress,
+.assigned-service,
+.service-history {
+    margin-top: 38px;
+}
+
+/* SECTION HEADER */
+
+.section-header {
+    margin-bottom: 18px;
+}
+
+.section-header h2 {
+    margin-bottom: 8px;
+}
+
+.section-header p {
+    color: #AEB7BD;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+/* SERVICE SUMMARY */
+
+.summary-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 15px;
+}
+
+.summary-card {
+    background-color: #2C3135;
+    border: 1px solid #454B50;
+    border-radius: 5px;
+    padding: 22px 18px;
+    text-align: center;
+    transition: border-color 0.2s ease;
+}
+
+.summary-card:hover {
+    border-color: #59883A;
+}
+
+.summary-card h3 {
+    color: #76A854;
+    font-size: 23px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.summary-card p {
+    color: #C9D0D4;
+    font-size: 13px;
+}
+
+/* SERVICE PROGRESS */
+
+.progress-card {
+    background-color: #2C3135;
+    border: 1px solid #454B50;
+    border-radius: 5px;
+    padding: 22px;
+}
+
+.progress-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.progress-header h3 {
+    color: #F1F3F4;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.progress-header span {
+    color: #76A854;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 10px;
+    background-color: #454B50;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 12px;
+}
+
+.progress-fill {
+    height: 100%;
+    background-color: #59883A;
+    border-radius: 10px;
+}
+
+.progress-card p {
+    color: #C9D0D4;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+/* ASSIGNED COMMUNITY SERVICE */
+
+.service-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.service-card {
+    background-color: #2C3135;
+    border: 1px solid #454B50;
+    border-radius: 5px;
+    padding: 20px;
+    transition: border-color 0.2s ease;
+}
+
+.service-card:hover {
+    border-color: #59883A;
+}
+
+.service-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.service-card-header h3 {
+    color: #76A854;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 7px;
+}
+
+.service-violation {
+    color: #C9D0D4;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+/* SERVICE STATUS */
+
+.status {
+    display: inline-block;
+    padding: 5px 11px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.status.ongoing {
+    color: #E6C66A;
+    background-color: #49432D;
+}
+
+.status.completed {
+    color: #76A854;
+    background-color: #2D4537;
+}
+
+/* SERVICE DETAILS */
+
+.service-details {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    border-top: 1px solid #454B50;
+    padding-top: 17px;
+}
+
+.service-detail-item {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.service-detail-item span {
+    color: #AEB7BD;
+    font-size: 12px;
+}
+
+.service-detail-item strong {
+    color: #F1F3F4;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* SERVICE HISTORY */
+
+.history-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.history-card {
+    background-color: #2C3135;
+    border: 1px solid #454B50;
+    border-radius: 5px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    transition: border-color 0.2s ease;
+}
+
+.history-card:hover {
+    border-color: #59883A;
+}
+
+.history-info {
+    flex: 1;
+}
+
+.history-info h3 {
+    color: #76A854;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 9px;
+}
+
+.history-info p {
+    color: #C9D0D4;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.history-hours {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+    white-space: nowrap;
+}
+
+.history-hours strong {
+    color: #F1F3F4;
+    font-size: 15px;
+}
+
+/* EMPTY STATES */
+
+.empty-service,
+.empty-history {
+    background-color: #2C3135;
+    border: 1px solid #454B50;
+    border-radius: 5px;
+    padding: 32px 20px;
+    text-align: center;
+}
+
+.empty-service h3,
+.empty-history h3 {
+    color: #76A854;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.empty-service p,
+.empty-history p {
+    color: #C9D0D4;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+/* TABLET RESPONSIVE DESIGN */
+
+@media screen and (max-width: 768px) {
+
+    .service-summary h2,
+    .service-progress h2,
+    .assigned-service h2,
+    .service-history h2 {
+        font-size: 21px;
+    }
+
+    .summary-container {
+        gap: 12px;
+    }
+
+    .summary-card {
+        padding: 19px 14px;
+    }
+
+    .summary-card h3 {
+        font-size: 21px;
+    }
+
+    .progress-card {
+        padding: 19px;
+    }
+
+    .service-card,
+    .history-card {
+        padding: 18px;
+    }
+}
+
+/* SMALL MOBILE */
+
+@media screen and (max-width: 480px) {
+
+    .service-summary h2,
+    .service-progress h2,
+    .assigned-service h2,
+    .service-history h2 {
+        font-size: 20px;
+    }
+
+    .service-progress,
+    .assigned-service,
+    .service-history {
+        margin-top: 30px;
+    }
+
+    .summary-container {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .summary-card {
+        padding: 18px;
+    }
+
+    .summary-card h3 {
+        font-size: 22px;
+    }
+
+    .progress-card {
+        padding: 17px;
+    }
+
+    .service-card,
+    .history-card {
+        padding: 17px;
+    }
+
+    .service-card-header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .service-details {
+        grid-template-columns: 1fr;
+        gap: 13px;
+    }
+
+    .history-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .history-hours {
+        align-items: flex-start;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .empty-service,
+    .empty-history {
+        padding: 27px 17px;
+    }
+}
