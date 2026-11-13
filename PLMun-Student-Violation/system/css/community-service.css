@@ -217,7 +217,6 @@
 .history-card {
     background-color: #2C3135;
     border: 1px solid #454B50;
-    border-radius: 5px;
     padding: 20px;
     display: flex;
     justify-content: space-between;
